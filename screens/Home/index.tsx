@@ -21,6 +21,11 @@ const Home: FC<Props> = props => {
         onPress={() => navigation.navigate(NavigationScreens.SignUp)}>
         <Text>Signup</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => navigation.navigate(NavigationScreens.Notifications)}>
+        <Text>Notifications</Text>
+      </TouchableOpacity>
     </View>
   );
 };

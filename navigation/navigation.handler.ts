@@ -1,4 +1,5 @@
 export enum NavigationScreens {
+    TakeALook = 'TakeALook',
     Welcome = 'Welcome',
     SignUp = 'Signup',
     Login = 'Login',
@@ -7,4 +8,8 @@ export enum NavigationScreens {
     Cart = 'Cart',
     Messages = 'Messages',
     Notifications = 'Notifications',
+}
+
+export const stackNavigatorOptions = {
+    headerShown: false
 }

@@ -1,22 +1,27 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationScreens } from './navigation.handler';
-import { HomeTabNavigation, AccountTabNavigation } from './Tabs';
+import { NavigationScreens, stackNavigatorOptions } from './navigation.handler';
+import TabNavigation from './Tabs';
 import Signup from '../screens/Signup';
+import Notifications from '../screens/Notifications';
+import TakeALook from '../screens/TakeALook';
 
 const StackNavigation = () => {
   const { Navigator, Screen } = createStackNavigator();
 
   return (
     <NavigationContainer>
-      <Navigator>
-        <Screen name={NavigationScreens.Home} component={HomeTabNavigation} />
-        <Screen
-          name={NavigationScreens.Account}
-          component={AccountTabNavigation}
-        />
+      <Navigator
+        screenOptions={stackNavigatorOptions}
+        initialRouteName={NavigationScreens.TakeALook}>
+        <Screen name={NavigationScreens.Home} component={TabNavigation} />
+        <Screen name={NavigationScreens.TakeALook} component={TakeALook} />
         <Screen name={NavigationScreens.SignUp} component={Signup} />
+        <Screen
+          name={NavigationScreens.Notifications}
+          component={Notifications}
+        />
       </Navigator>
     </NavigationContainer>
   );

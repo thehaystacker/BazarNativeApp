@@ -7,38 +7,19 @@ import AccountScreen from '../screens/Account';
 import MessagesScreen from '../screens/Messages';
 import CartScreen from '../screens/Cart';
 
-interface TabPropsEntity {}
+interface TabNavigationEntity {}
 
-const HomeTab = createBottomTabNavigator();
+const { Navigator, Screen } = createBottomTabNavigator();
 
-export const HomeTabNavigation: FC<TabPropsEntity> = () => {
+const TabNavigation: FC<TabNavigationEntity> = () => {
   return (
-    <HomeTab.Navigator>
-      <HomeTab.Screen name={NavigationScreens.Home} component={HomeScreen} />
-      <HomeTab.Screen
-        name={NavigationScreens.Account}
-        component={AccountScreen}
-      />
-      <HomeTab.Screen
-        name={NavigationScreens.Messages}
-        component={MessagesScreen}
-      />
-      <HomeTab.Screen name={NavigationScreens.Cart} component={CartScreen} />
-    </HomeTab.Navigator>
+    <Navigator>
+      <Screen name={NavigationScreens.Home} component={HomeScreen} />
+      <Screen name={NavigationScreens.Messages} component={MessagesScreen} />
+      <Screen name={NavigationScreens.Cart} component={CartScreen} />
+      <Screen name={NavigationScreens.Account} component={AccountScreen} />
+    </Navigator>
   );
 };
 
-const AccountTab = createBottomTabNavigator();
-
-export const AccountTabNavigation: FC<TabPropsEntity> = () => {
-  return (
-    <AccountTab.Navigator>
-      <AccountTab.Screen name={NavigationScreens.Home} component={HomeScreen} />
-      <AccountTab.Screen
-        name={NavigationScreens.Messages}
-        component={MessagesScreen}
-      />
-      <AccountTab.Screen name={NavigationScreens.Cart} component={CartScreen} />
-    </AccountTab.Navigator>
-  );
-};
+export default TabNavigation;
