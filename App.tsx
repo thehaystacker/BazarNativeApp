@@ -1,8 +1,13 @@
 import React from 'react';
 import StackNavigation from './navigation/Stack';
+import Theme from './theme';
 
 const App = () => {
-  return <StackNavigation />;
+  return (
+    <Theme>
+      <StackNavigation />
+    </Theme>
+  );
 };
 
 export default App;
