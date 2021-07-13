@@ -11,12 +11,12 @@ interface Props {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
 }
 
-const Welcome: FC<Props> = props => {
+const Home: FC<Props> = props => {
   const { navigation } = props;
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Welcome</Text>
+      <Text>Home dfds</Text>
       <TouchableOpacity
         onPress={() => navigation.navigate(NavigationScreens.SignUp)}>
         <Text>Signup</Text>
@@ -25,4 +25,4 @@ const Welcome: FC<Props> = props => {
   );
 };
 
-export default Welcome;
+export default Home;
