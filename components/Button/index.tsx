@@ -1,29 +1,25 @@
 import React, { FC } from 'react';
-import { TouchableOpacity, Text } from 'react-native';
-import styled from 'styled-components/native';
+import { TouchableOpacity, Text, GestureResponderEvent } from 'react-native';
+import { ButtonWrapper, ButtonLabel } from '../GlobalElements';
 
-interface ButtonEntity {}
-
-const ButtonWrapper = styled.TouchableOpacity`
-  background-color: ${(props: any) => props.theme.background.blue};
-  width: 100%;
-  padding: 14px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-`;
-
-const ButtonLabel = styled.Text`
-  color: ${(props: any) => props.theme.text.white};
-  font-size: 18px;
-`;
+interface ButtonEntity {
+  label: string;
+  onPress?: (event: GestureResponderEvent) => void;
+  variant?: 'filled' | 'hollow';
+}
 
 const Button: FC<ButtonEntity> = props => {
+  const { label, onPress, variant } = props;
+
   return (
-    <ButtonWrapper>
-      <ButtonLabel>Take a look</ButtonLabel>
+    <ButtonWrapper onPress={onPress} variant={variant} activeOpacity={0.8}>
+      <ButtonLabel variant={variant}>{label}</ButtonLabel>
     </ButtonWrapper>
   );
+};
+
+Button.defaultProps = {
+  variant: 'filled',
 };
 
 export default Button;
