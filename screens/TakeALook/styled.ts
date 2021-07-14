@@ -9,3 +9,8 @@ export const PageWrapper = styled(PageContainer)`
 export const TakeALookImg = styled.Image`
   width: 100%;
 `;
+
+export const ButtonWrapper = styled.View`
+  flex-direction: column;
+  width: 100%;
+`;
