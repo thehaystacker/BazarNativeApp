@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Image } from 'react-native';
 import {
   NavigationScreenProp,
   NavigationState,
@@ -25,8 +24,8 @@ const TakeALook: FC<Props> = props => {
           style={{ resizeMode: 'contain' }}
         />
         <ButtonWrapper>
-          <Button label="Take a look"></Button>
-          <Button label="Sign In" variant="hollow"></Button>
+          <Button>Take a look</Button>
+          <Button variant="secondary">Sign In</Button>
         </ButtonWrapper>
       </VerticalSection>
     </PageWrapper>
