@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { PageContainer } from '../../components/GlobalElements';
+import { PageContainer } from '../../components';
 
 export const PageWrapper = styled(PageContainer)`
   flex: 1;

@@ -1,23 +1,6 @@
 import 'styled-components';
-
+import { light as DefaultTheme } from './config';
 declare module 'styled-components' {
-  export interface DefaultTheme {
-    background: {
-      blue: string;
-      grey: string;
-      white: string;
-    };
-    text: {
-      blue: string;
-      black: string;
-      grey: string;
-      white: string;
-    };
-    icon: {
-      blue: string;
-      black: string;
-      grey: string;
-      white: string;
-    };
-  }
+  type Theme = typeof DefaultTheme;
+  export interface DefaultTheme extends Theme {}
 }
