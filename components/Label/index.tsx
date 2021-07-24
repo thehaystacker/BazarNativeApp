@@ -17,7 +17,7 @@ const Label: FC<LabelPropsEntity> = props => {
 Label.defaultProps = {
   weight: 'normal',
   type: 'h4',
-  variant: 'primary',
+  variant: 'black',
 };
 
 export default Label;

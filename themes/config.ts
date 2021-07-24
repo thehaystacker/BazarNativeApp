@@ -1,4 +1,9 @@
+const defaultStyles = {
+  spacing: 8,
+};
+
 export const light = {
+  ...defaultStyles,
   background: {
     blue: '#2291ff',
     grey: '#f3f9ff',
@@ -19,6 +24,7 @@ export const light = {
 };
 
 export const dark = {
+  ...defaultStyles,
   background: {
     blue: '#000',
     grey: '#f3f9ff',

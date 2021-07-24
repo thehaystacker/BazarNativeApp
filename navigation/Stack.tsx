@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationScreens, stackNavigatorOptions } from './navigation.handler';
 import TabNavigation from './Tabs';
 import Signup from '../screens/Signup';
+import SignIn from '../screens/SignIn';
 import Notifications from '../screens/Notifications';
 import TakeALook from '../screens/TakeALook';
 
@@ -14,9 +15,10 @@ const StackNavigation = () => {
     <NavigationContainer>
       <Navigator
         screenOptions={stackNavigatorOptions}
-        initialRouteName={NavigationScreens.TakeALook}>
+        initialRouteName={NavigationScreens.SignIn}>
         <Screen name={NavigationScreens.Home} component={TabNavigation} />
         <Screen name={NavigationScreens.TakeALook} component={TakeALook} />
+        <Screen name={NavigationScreens.SignIn} component={SignIn} />
         <Screen name={NavigationScreens.SignUp} component={Signup} />
         <Screen
           name={NavigationScreens.Notifications}
