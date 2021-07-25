@@ -12,7 +12,7 @@ const styles = {
     font-size: 28px;
   `,
   h4: css`
-    font-size: 16px;
+    font-size: 24px;
   `,
   h5: css`
     font-size: 12px;
@@ -24,13 +24,13 @@ const styles = {
     font-size: 14px;
   `,
   thin: css`
-    font-weight: 400;
+    font-family: Poppins-Light;
   `,
   normal: css`
-    font-weight: bold;
+    font-family: Poppins-Regular;
   `,
   bold: css`
-    font-weight: bold;
+    font-family: Poppins-Bold;
   `,
   primary: css`
     color: ${props => props.theme.text.blue};

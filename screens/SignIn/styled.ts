@@ -11,6 +11,6 @@ export const PageWrapper = styled.View`
   flex-direction: column;
 `;
 
-export const ScreenTitle = styled(GridContainer)`
+export const LogoWrapper = styled(GridContainer)`
   align-items: center;
 `;

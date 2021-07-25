@@ -26,3 +26,12 @@ export const VerticalSection = styled.View`
   justify-content: center;
   align-items: center;
 `;
+
+export const FormGroup = styled.View`
+  margin: 10px 0;
+`;
+
+export const InputText = styled.TextInput`
+  border: none;
+  border-bottom: 1px solid ${props => props.theme.text.white};
+`;

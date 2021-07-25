@@ -6,8 +6,9 @@ import {
   NavigationParams,
 } from 'react-navigation';
 import Label from '../../components/Label';
-import { GridContainer } from '../../components';
-import { ScreenWrapper, PageWrapper, ScreenTitle } from './styled';
+import { GridContainer, FormGroup, InputText } from '../../components';
+import { ScreenWrapper, PageWrapper, LogoWrapper } from './styled';
+import { useState } from 'react';
 
 interface Props {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
@@ -16,15 +17,27 @@ interface Props {
 const SignIn: FC<Props> = props => {
   const { navigation } = props;
 
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+
   return (
     <ScreenWrapper>
       <GridContainer horizontalSpacing={4} verticalSpacing={2}>
         <PageWrapper>
-          <ScreenTitle verticalSpacing={5}>
-            <Label type="h2" variant="secondary">
+          <LogoWrapper verticalSpacing={5}>
+            <Label type="h2" variant="secondary" weight="bold">
               bazaar
             </Label>
-          </ScreenTitle>
+          </LogoWrapper>
+          <GridContainer verticalSpacing={3}>
+            <Label type="h4" variant="secondary">
+              Sign In
+            </Label>
+          </GridContainer>
+          <FormGroup>
+            <InputText value={email} onChange={() => {}}></InputText>
+            <InputText value={password} onChange={() => {}}></InputText>
+          </FormGroup>
         </PageWrapper>
       </GridContainer>
     </ScreenWrapper>
